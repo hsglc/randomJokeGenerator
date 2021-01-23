@@ -24,3 +24,8 @@ class UnsplashApi {
         }
     }
 }
+
+export default function getImage(){
+    const getImage = new UnsplashApi().getRandomImage();
+    return getImage;
+}
