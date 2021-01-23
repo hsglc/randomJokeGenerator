@@ -1,3 +1,5 @@
+import getImage from '../api/unsplash_api.js'
+import getJoke from '../api/joke_api.js'
 class Screen {
   constructor() {
     this.getApiBtn = document.querySelector(".get-all-apis");
@@ -5,9 +7,9 @@ class Screen {
   }
 
   async getJokeAndImage() {
-    const randomImage = await new UnsplashApi().getRandomImage();
+    const randomImage = await getImage();
 
-    const randomJoke = await new JokeApi().getRandomJoke();
+    const randomJoke = await getJoke();
     const apiResponse = {
       randomImage,
       randomJoke,
@@ -36,4 +38,8 @@ class Screen {
         </div>
       </div>`;
   }
+}
+
+export default function init(){
+  new Screen();
 }

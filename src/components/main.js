@@ -1,2 +1,3 @@
-const screen = new Screen();
+import init from '../components/screen.js';
 
+init();
