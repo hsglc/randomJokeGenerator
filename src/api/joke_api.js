@@ -1,3 +1,4 @@
+import axios from 'axios'
 class JokeApi {
   constructor() {
     this.baseURL = "https://api.chucknorris.io";

@@ -1,3 +1,4 @@
+import axios from 'axios'
 class UnsplashApi {
     constructor(){
         this.baseURL = 'https://api.unsplash.com';
